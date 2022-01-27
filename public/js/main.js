@@ -1,5 +1,3 @@
-
-
 // Fetch datas.
 fetch("http://localhost:3000/products")
     .then(function (response) {
@@ -30,3 +28,14 @@ fetch("http://localhost:3000/products")
             })
         }
     })
+
+// Post datas from form.
+document.querySelector('#product-form').addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(e);
+    const formData = new FormData(e.target)
+    const datas = Object.fromEntries(formData)
+    console.log(datas);
+})
+  
+
