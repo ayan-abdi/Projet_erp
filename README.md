@@ -12,8 +12,8 @@
 11 : Préparez les deletes (inactive/desactivate) des datas.  
 
 ## Gestion magasin fruits et légumes ##
-1 : Liste fruits et légumes (nom, prix achat, prix de vente, fournisseur, stock, origine, catégorie (fruit ou légume), image, ...)  
-2 : Liste des fournisseurs (nom, adresse, produits (id), montant total achats, ...)  
-3 : Liste des clients (nom, prenom, age, adresse, email, tel, montant total ventes, ...)  
-4 : Liste des commandes fournisseurs (nom fournisseur (id), produit, quantité, prix total, date dernier achat, ...)  
-5 : Liste des commandes clients (nom client (id), prix total, date derniere visite, (produits), ...)  
+1 : Liste fruits et légumes (id, nom, prix achat, prix de vente, fournisseur, stock, origine, catégorie (fruit ou légume), image, ...)  
+2 : Liste des fournisseurs (id, nom, adresse, produits (id), montant total achats, ...)  
+3 : Liste des clients (id, nom, prenom, age, adresse, email, tel, montant total ventes, ...)  
+4 : Liste des commandes fournisseurs (id, nom fournisseur (id), produit, quantité, prix total, date dernier achat, ...)  
+5 : Liste des commandes clients (id, nom client (id), prix total, date derniere visite, (produits), ...)  
