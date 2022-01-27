@@ -1,19 +1,64 @@
 {
-    "users" : [
-        { "id" : 1, "name" : "Rachid" },
-        { "id" : 2, "name" : "Ayan" },
-        { "id" : 3, "name" : "Farid" },
-        { "id" : 4, "name" : "Morgane" }
+    "products": [
+        {
+            "id": 1,
+            "name": "pomme",
+            "category": "fruit",
+            "origin": "Belgium",
+            "stock": 5,
+            "price_sell": 3,
+            "price_supplier": 2,
+            "supplier": "carrefour",
+            "image": "./img/pomme.jpg"
+        },
+        {
+            "id": 2,
+            "name": "poire",
+            "category": "fruit",
+            "origin": "Belgium",
+            "stock": 6,
+            "price_sell": 4,
+            "price_supplier": 3,
+            "supplier": "carrefour",
+            "image": "./img/poire.jpg"
+        }
     ],
-
-    "commands" : [
-        { "id" : 1, "userId" : 1, "total" : "8500"},
-        { "id" : 2, "userId" : 1, "total" : "8500"},
-        { "id" : 3, "userId" : 1, "total" : "8500"},
-        { "id" : 4, "userId" : 2, "total" : "500"},
-        { "id" : 5, "userId" : 3, "total" : "1600"},
-        { "id" : 6, "userId" : 4, "total" : "15000"},
-        { "id" : 7, "userId" : 4, "total" : "15000"},
-        { "id" : 8, "userId" : 4, "total" : "15000"}
+    "customers": [
+        {
+            "id": 1,
+            "first_name": "Olivier",
+            "last_name": "Delvaux",
+            "age": 34,
+            "email ": "delvauxo@outlook.com",
+            "tel": 487610422,
+            "addres": "Bruxelles",
+            "total_pay": 50
+        },
+        {
+            "id": 2,
+            "first_name": "Ayan",
+            "last_name": "Abdi",
+            "age": 32,
+            "email ": "yaniabdi@gmail.com",
+            "tel": 473178010,
+            "addres": "Leuven",
+            "total_pay": 55
+        }
+    ],
+    "suppliers": [
+        {
+            "id": 1,
+            "name": "carrefour",
+            "addres": "charleroi",
+            "product_id": 1,
+            "total_purchases": 500
+        },
+        {
+            "id": 2,
+            "name": "lidl",
+            "addres": "mons",
+            "product_id": 3,
+            "total_purchases": 100
+        }
     ]
 }
