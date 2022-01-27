@@ -1,3 +1,5 @@
+import Product from "../models/Product.js"
+
 // Fetch datas.
 fetch("http://localhost:3000/products")
     .then(function (response) {
@@ -32,10 +34,38 @@ fetch("http://localhost:3000/products")
 // Post datas from form.
 document.querySelector('#product-form').addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log(e);
     const formData = new FormData(e.target)
     const datas = Object.fromEntries(formData)
     console.log(datas);
+    // console.log(datas.valueOf);
+    const product = new Product(
+        datas["product-id"],
+        datas["product-name"], 
+        datas["product-category"], 
+        datas["product-country"], 
+        datas["product-stock"], 
+        datas["product-price-sell"], 
+        datas["product-supplier"],
+        datas["product-price-supplier"], 
+        datas["product-image"]
+    )
+    console.log(product);
+
+    fetch('http://localhost:3000/products', {
+        method: "post", 
+        headers: {
+            "Accept": "application/json", 
+            "Content-Type": "application/json"
+        }, 
+        body: JSON.stringify(product)
+    })
+    .then(function(response) {
+        if(response.ok) {
+            response.json().then(function(datas) {
+                console.log(datas);
+            })
+        }
+    })
 })
   
 

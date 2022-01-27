@@ -1,64 +1,75 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "pomme",
-            "category": "fruit",
-            "origin": "Belgium",
-            "stock": 5,
-            "price_sell": 3,
-            "price_supplier": 2,
-            "supplier": "carrefour",
-            "image": "./img/pomme.jpg"
-        },
-        {
-            "id": 2,
-            "name": "poire",
-            "category": "fruit",
-            "origin": "Belgium",
-            "stock": 6,
-            "price_sell": 4,
-            "price_supplier": 3,
-            "supplier": "carrefour",
-            "image": "./img/poire.jpg"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "first_name": "Olivier",
-            "last_name": "Delvaux",
-            "age": 34,
-            "email ": "delvauxo@outlook.com",
-            "tel": 487610422,
-            "addres": "Bruxelles",
-            "total_pay": 50
-        },
-        {
-            "id": 2,
-            "first_name": "Ayan",
-            "last_name": "Abdi",
-            "age": 32,
-            "email ": "yaniabdi@gmail.com",
-            "tel": 473178010,
-            "addres": "Leuven",
-            "total_pay": 55
-        }
-    ],
-    "suppliers": [
-        {
-            "id": 1,
-            "name": "carrefour",
-            "addres": "charleroi",
-            "product_id": 1,
-            "total_purchases": 500
-        },
-        {
-            "id": 2,
-            "name": "lidl",
-            "addres": "mons",
-            "product_id": 3,
-            "total_purchases": 100
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "pomme",
+      "category": "fruit",
+      "origin": "Belgium",
+      "stock": 5,
+      "price_sell": 3,
+      "price_supplier": 2,
+      "supplier": "carrefour",
+      "image": "./img/pomme.jpg"
+    },
+    {
+      "id": 2,
+      "name": "poire",
+      "category": "fruit",
+      "origin": "Belgium",
+      "stock": 6,
+      "price_sell": 4,
+      "price_supplier": 3,
+      "supplier": "carrefour",
+      "image": "./img/poire.jpg"
+    },
+    {
+      "id": 3,
+      "name": "pomme de terre",
+      "category": "vegetable",
+      "origin": "Albania",
+      "stock": "14",
+      "price_sell": "12",
+      "supplier": "delhaize",
+      "price_supplier": "10",
+      "image": {}
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "first_name": "Olivier",
+      "last_name": "Delvaux",
+      "age": 34,
+      "email ": "delvauxo@outlook.com",
+      "tel": 487610422,
+      "addres": "Bruxelles",
+      "total_pay": 50
+    },
+    {
+      "id": 2,
+      "first_name": "Ayan",
+      "last_name": "Abdi",
+      "age": 32,
+      "email ": "yaniabdi@gmail.com",
+      "tel": 473178010,
+      "addres": "Leuven",
+      "total_pay": 55
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "carrefour",
+      "addres": "charleroi",
+      "product_id": 1,
+      "total_purchases": 500
+    },
+    {
+      "id": 2,
+      "name": "lidl",
+      "addres": "mons",
+      "product_id": 3,
+      "total_purchases": 100
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Erp</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
     <script src="js/countries.js" defer></script>
 </head>
 <body>
@@ -22,6 +22,8 @@
     <form id="product-form" method="post" action="db.json">
         <fieldset>
             <legend>Add a new product :</legend>
+            <!-- Id -->
+            <input id="product-id" type="hidden" name="product-id">
             <!-- Name -->
             <label for="product-name">Name : </label><br>
             <input type="text" id="product-name" name="product-name"><br>
