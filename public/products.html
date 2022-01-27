@@ -7,6 +7,7 @@
     <title>Projet Erp</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <script src="js/countries.js" defer></script>
 </head>
 <body>
     <nav>
@@ -17,43 +18,44 @@
             <li><a href="./products.html">Products</a></li>
         </ul>
     </nav>
-    <section id="listing">
-        <!-- <table>
-            <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>category</th>
-                <th>origin</th>
-                <th>stock</th>
-                <th>price_sell</th>
-                <th>price_supplier</th>
-                <th>supplier</th>
-                <th>image</th>
-            </tr>
-            <tr>
-               <td>1</td>
-               <td>pomme</td>
-               <td>fruit</td>
-               <td>belgium</td>
-               <td>5</td>
-               <td>3</td>
-               <td>2</td>
-               <td>carrefour</td>
-               <td>pomme.jpg</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>poire</td>
-                <td>fruit</td>
-                <td>belgium</td>
-                <td>6</td>
-                <td>4</td>
-                <td>3</td>
-                <td>carrefour</td>
-                <td>poire.jpg</td>
-            </tr>
-        </table> -->
-    </section>
+    <section id="listing"></section>
+    <form method="post" action="db.json">
+        <fieldset>
+            <legend>Add a new product :</legend>
+            <!-- Name -->
+            <label for="product-name">Name : </label><br>
+            <input type="text" id="product-name" name="product-name"><br>
+            <!-- Category -->
+            <label for="product-category">Category :</label><br>
+            <select name="product-category" id="product-category">
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+            </select><br>
+            <!-- Origin -->
+            <label for="product-country">Origin :</label><br>
+            <select name="product-country" id="product-country"></select><br>
+            <!-- Stock -->
+            <label for="product-stock">Stock :</label><br>
+            <input type="text" id="product-stock" name="product-stock"><br>
+            <!-- Price-sell -->
+            <label for="product-price-sell">Price sell :</label><br>
+            <input type="text" id="product-price-sell" name="product-price-sell"><br>
+            <!-- Price-supplier -->
+            <label for="product-price-supplier">Price supplier :</label><br>
+            <input type="text" id="product-price-supplier" name="product-price-supplier"><br>
+            <!-- Suppliers -->
+            <label for="product-supplier">Supplier :</label><br>
+            <select name="product-supplier" id="product-supplier">
+                <option value="carrefour">Carrefour</option>
+                <option value="delhaize">Delhaize</option>
+            </select><br>
+            <!-- Image -->
+            <label for="product-image">Image :</label><br>
+            <input type="file" name="product-image" id="product-image"><br><br>
+            <!-- Submit button -->
+            <input type="submit" id="form-submit" value="Submit">
+        </fieldset>
+    </form>
     <footer>Footer</footer> 
 </body>
 </html>
