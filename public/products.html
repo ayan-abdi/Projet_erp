@@ -7,18 +7,15 @@
     <title>Projet Erp</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/main.js" defer></script>
+    <script src="js/includes.js" defer></script>
     <script src="js/countries.js" defer></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./customers.html">Customers</a></li>
-            <li><a href="./suppliers.html">Suppliers</a></li>
-            <li><a href="./products.html">Products</a></li>
-        </ul>
-    </nav>
+    <!-- Navigation import -->
+    <div w3-include-html="navigation.html"></div> 
+    <!-- Listing -->
     <section id="listing"></section>
+    <!-- Form -->
     <form id="product-form" method="post" action="db.json">
         <fieldset>
             <legend>Add a new product :</legend>

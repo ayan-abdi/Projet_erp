@@ -21,6 +21,17 @@
       "supplier": "delhaize",
       "price_supplier": "5",
       "image": "ori_and_the_will_of_the_wisps_white_bg.png"
+    },
+    {
+      "id": 3,
+      "name": "Peche",
+      "category": "fruit",
+      "origin": "Italy",
+      "stock": "16",
+      "price_sell": "5",
+      "supplier": "carrefour",
+      "price_supplier": "3",
+      "image": "hollow_knight_white_border_black_bg[274].png"
     }
   ],
   "customers": [
