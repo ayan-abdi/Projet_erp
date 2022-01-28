@@ -47,7 +47,7 @@ document.querySelector('#product-form').addEventListener('submit', (e) => {
         datas["product-price-sell"], 
         datas["product-supplier"],
         datas["product-price-supplier"], 
-        datas["product-image"]
+        datas["product-image"].name
     )
     console.log(product);
 
@@ -58,13 +58,6 @@ document.querySelector('#product-form').addEventListener('submit', (e) => {
             "Content-Type": "application/json"
         }, 
         body: JSON.stringify(product)
-    })
-    .then(function(response) {
-        if(response.ok) {
-            response.json().then(function(datas) {
-                console.log(datas);
-            })
-        }
     })
 })
   

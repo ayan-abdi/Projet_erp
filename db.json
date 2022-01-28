@@ -2,36 +2,25 @@
   "products": [
     {
       "id": 1,
-      "name": "pomme",
-      "category": "fruit",
-      "origin": "Belgium",
-      "stock": 5,
-      "price_sell": 3,
-      "price_supplier": 2,
-      "supplier": "carrefour",
-      "image": "./img/pomme.jpg"
+      "name": "Tomate",
+      "category": "vegetable",
+      "origin": "France",
+      "stock": "15",
+      "price_sell": "3",
+      "supplier": "delhaize",
+      "price_supplier": "1",
+      "image": "d35m714-122f9dfa-9135-4c74-a814-f8c8bb71fa87.jpg"
     },
     {
       "id": 2,
-      "name": "poire",
+      "name": "Cerise",
       "category": "fruit",
-      "origin": "Belgium",
-      "stock": 6,
-      "price_sell": 4,
-      "price_supplier": 3,
-      "supplier": "carrefour",
-      "image": "./img/poire.jpg"
-    },
-    {
-      "id": 3,
-      "name": "pomme de terre",
-      "category": "vegetable",
-      "origin": "Albania",
-      "stock": "14",
-      "price_sell": "12",
+      "origin": "Spain",
+      "stock": "5",
+      "price_sell": "9",
       "supplier": "delhaize",
-      "price_supplier": "10",
-      "image": {}
+      "price_supplier": "5",
+      "image": "ori_and_the_will_of_the_wisps_white_bg.png"
     }
   ],
   "customers": [
