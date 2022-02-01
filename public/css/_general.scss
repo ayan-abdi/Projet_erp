@@ -1,7 +1,69 @@
+// 
+// Reset.
+// 
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+// 
+// Generic Classes.
+// 
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+// 
+// DOM.
+// 
+
+// Table.
+// 
 table {
     border-collapse: collapse;
 
     td {
         border: 1px solid black;
+    }
+}
+
+// Navigation.
+// 
+nav {
+
+    ul {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        
+        li {
+            list-style: none;
+
+            a {
+                background-color: #ff00cc;
+                color: white;
+                text-decoration: none;
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+
+// Form.
+// 
+form {
+
+    &#product-form {
+        display: block;
     }
 }

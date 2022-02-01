@@ -1,64 +1,63 @@
+import Supplier from "../models/Supplier.js"
 import Product from "../models/Product.js"
 
-// Fetch datas.
-fetch("http://localhost:3000/products")
-    .then(function (response) {
-        console.log(response);
-        if (response.ok) {
-            response.json().then(function (products) {
-                console.log(products);
-                let html = ''
-                html += `<table>`
-                html += `<tr>`
-                for (const key of Object.keys(products[0])) {
-                    html += `<th>${key}</th>`
-                }
-                html += `</tr>`
-                for (const product of products) {
-                    html += `<tr>` 
-                    // console.log(product);
-                    for (const value of Object.values(product)) {
-                        html += `<td>${value}</td>` 
-                    }
-                    html += `</tr>`
-                }
-                html += `</table>`
+// Get datas from API.
+const products  = await fetchDatas('http://localhost:3000/products')
+const suppliers  = await fetchDatas('http://localhost:3000/suppliers')
+const customers  = await fetchDatas('http://localhost:3000/customers')
 
-                // Selector.
-                const listing = document.querySelector('#listing')
-                listing.innerHTML = html
-            })
-        }
+// Create listing datas from API.
+createListingDatas(document.querySelectorAll('#menu a[data-listing]'), document.querySelector('#btn-add'))
+
+
+
+
+
+// Create HTML products listing table.
+createTable(products, document.querySelector('#listing'))
+
+// Add suppliers to new product select form.
+createSelectOptions(suppliers, document.querySelector('#product-supplier'))
+// Load countries datas from API and insert them in select.
+loadCountries(document.querySelector("#product-country"))
+
+
+
+console.log(document.querySelector('#form-product'))
+console.log(document.querySelector('#form-product form'))
+
+if (document.querySelector('#form-product')) {
+    document.querySelector('#form-product form').addEventListener('submit', (e) => {
+        
+        // Prevent default behavior.
+        e.preventDefault()
+        // Retrieve datas from form.
+        const formData = new FormData(e.target)
+        const datas = Object.fromEntries(formData)
+        console.log(datas)
+    
+        // Instanciate new product with datas.
+        const product = new Product(
+            datas["product-id"],
+            datas["product-name"], 
+            datas["product-category"], 
+            datas["product-country"], 
+            datas["product-stock"], 
+            datas["product-price-sell"], 
+            datas["product-supplier"],
+            datas["product-price-supplier"]
+        )
+
+        console.log(product)
+    
+        // Post datas to API.
+        fetch('http://localhost:3000/products', {
+            method: "post", 
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(product)
+        })
     })
-
-// Post datas from form.
-document.querySelector('#product-form').addEventListener('submit', (e) => {
-    e.preventDefault()
-    const formData = new FormData(e.target)
-    const datas = Object.fromEntries(formData)
-    console.log(datas);
-    // console.log(datas.valueOf);
-    const product = new Product(
-        datas["product-id"],
-        datas["product-name"], 
-        datas["product-category"], 
-        datas["product-country"], 
-        datas["product-stock"], 
-        datas["product-price-sell"], 
-        datas["product-supplier"],
-        datas["product-price-supplier"], 
-        datas["product-image"].name
-    )
-    console.log(product);
-
-    fetch('http://localhost:3000/products', {
-        method: "post", 
-        headers: {
-            "Accept": "application/json", 
-            "Content-Type": "application/json"
-        }, 
-        body: JSON.stringify(product)
-    })
-})
-  
-
+}

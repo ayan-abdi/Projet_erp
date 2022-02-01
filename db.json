@@ -8,8 +8,7 @@
       "stock": "15",
       "price_sell": "3",
       "supplier": "delhaize",
-      "price_supplier": "1",
-      "image": "d35m714-122f9dfa-9135-4c74-a814-f8c8bb71fa87.jpg"
+      "price_supplier": "1"
     },
     {
       "id": 2,
@@ -19,8 +18,7 @@
       "stock": "5",
       "price_sell": "9",
       "supplier": "delhaize",
-      "price_supplier": "5",
-      "image": "ori_and_the_will_of_the_wisps_white_bg.png"
+      "price_supplier": "5"
     },
     {
       "id": 3,
@@ -30,8 +28,47 @@
       "stock": "16",
       "price_sell": "5",
       "supplier": "carrefour",
-      "price_supplier": "3",
-      "image": "hollow_knight_white_border_black_bg[274].png"
+      "price_supplier": "3"
+    },
+    {
+      "id": 4,
+      "name": "Banane",
+      "category": "fruit",
+      "origin": "Somalia",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Lidl",
+      "price_supplier": "2"
+    },
+    {
+      "id": 5,
+      "name": "Pomme",
+      "category": "fruit",
+      "origin": "Antarctica",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Carrefour",
+      "price_supplier": "2"
+    },
+    {
+      "id": 6,
+      "name": "Poire",
+      "category": "fruit",
+      "origin": "Belgium",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Lidl",
+      "price_supplier": "2"
+    },
+    {
+      "id": 7,
+      "name": "Orange",
+      "category": "fruit",
+      "origin": "Portugal",
+      "stock": "50",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "2"
     }
   ],
   "customers": [
@@ -59,14 +96,14 @@
   "suppliers": [
     {
       "id": 1,
-      "name": "carrefour",
+      "name": "Carrefour",
       "addres": "charleroi",
       "product_id": 1,
       "total_purchases": 500
     },
     {
       "id": 2,
-      "name": "lidl",
+      "name": "Lidl",
       "addres": "mons",
       "product_id": 3,
       "total_purchases": 100

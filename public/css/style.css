@@ -1,8 +1,51 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
 table {
   border-collapse: collapse;
 }
 
 table td {
   border: 1px solid black;
+}
+
+nav ul {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  background-color: #ff00cc;
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+form#product-form {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
