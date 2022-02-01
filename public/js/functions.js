@@ -53,39 +53,38 @@ function createListingDatas(arrayLinks, inputSubmit) {
             e.preventDefault()
 
             
-// // Fetch datas from API.
-// const datas = await fetchDatas(window.location.origin + '/' + this.dataset.listing + 's')
-// // Create HTML products listing table.
-// createTable(datas, document.querySelector('#listing'))
-// // Set attributes to add button.
-// inputSubmit.setAttribute('value', 'Add a ' + capitalizeFirstLetter(this.dataset.listing))
-// inputSubmit.setAttribute('data-page', this.dataset.listing)
-// // On add button click.
-// inputSubmit.addEventListener('click', function(e) {
-//     // Stop Immediate propagation if click on multiples menu btns before add item.
-//     e.stopImmediatePropagation()
-//     // Disable add button.
-//     e.target.setAttribute('disabled', '')
-//     // Create HTML element to include.
-//     let html = document.createElement('div')
-//     html.setAttribute('w3-include-html', `form-${this.dataset.page}.html`)
-//     html.setAttribute('id', `form-${this.dataset.page}`)
-//     // Insert HTML element.
-//     document.body.appendChild(html)
-//     // Include.
-//     includeHTML()
-//     // If page is PRODUCT.
-//     if (this.dataset.page === 'product') {
-//         (async function() {
-//             // Fetch suppliers datas from API.
-//             const suppliers  = await fetchDatas(window.location.origin + '/suppliers')
-//             // Add suppliers to new product select form.
-//             createSelectOptions(suppliers, document.querySelector('#product-supplier'))
-//             // Load countries datas from API and insert them in select.
-//             loadCountries(document.querySelector("#product-country"))
-//         })()
-//     }
-// })
+// Fetch datas from API.
+const datas = await fetchDatas(window.location.origin + '/' + this.dataset.listing + 's')
+// Create HTML products listing table.
+createTable(datas, document.querySelector('#listing'))
+// Set attributes to add button.
+inputSubmit.setAttribute('value', 'Add a ' + capitalizeFirstLetter(this.dataset.listing))
+inputSubmit.setAttribute('data-page', this.dataset.listing)
+inputSubmit.setAttribute('data-bs-target', '#' + this.dataset.listing + 'Modal')
+// On add button click.
+inputSubmit.addEventListener('click', function(e) {
+    // Stop Immediate propagation if click on multiples menu btns before add item.
+    e.stopImmediatePropagation()
+    // Create HTML element to include.
+    let html = document.createElement('div')
+    html.setAttribute('w3-include-html', `form-${this.dataset.page}.html`)
+    html.setAttribute('id', `form-${this.dataset.page}`)
+    // Insert HTML element.
+    document.body.appendChild(html)
+    // Include.
+    includeHTML()
+    // If page is PRODUCT.
+    if (this.dataset.page === 'product') {
+        (async function() {
+            // Fetch suppliers datas from API.
+            const suppliers  = await fetchDatas(window.location.origin + '/suppliers')
+            // Add suppliers to new product select form.
+            createSelectOptions(suppliers, document.querySelector('#product-supplier'))
+            // Load countries datas from API and insert them in select.
+            loadCountries(document.querySelector("#product-country"))
+        })()
+    }
+})
 
 
 

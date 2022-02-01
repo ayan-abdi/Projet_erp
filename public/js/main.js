@@ -9,17 +9,11 @@ const customers  = await fetchDatas('http://localhost:3000/customers')
 // Create listing datas from API.
 createListingDatas(document.querySelectorAll('#menu a[data-listing]'), document.querySelector('#btn-add'))
 
+// // Add suppliers to new product select form.
+// createSelectOptions(suppliers, document.querySelector('#product-supplier'))
 
-
-
-
-// Create HTML products listing table.
-createTable(products, document.querySelector('#listing'))
-
-// Add suppliers to new product select form.
-createSelectOptions(suppliers, document.querySelector('#product-supplier'))
-// Load countries datas from API and insert them in select.
-loadCountries(document.querySelector("#product-country"))
+// // Load countries datas from API and insert them in select.
+// loadCountries(document.querySelector("#product-country"))
 
 
 
