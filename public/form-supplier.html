@@ -1,50 +1,46 @@
 <!-- Modal -->
 <div class="modal fade" id="supplierModal" tabindex="-1" aria-labelledby="supplierModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="supplierModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="supplierModalLabel">Add a new supplier :</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- Form import -->
-                <form method="post" action="db.json">
-                    <fieldset>
-                        <legend>Add a new supplier :</legend>
-                        <!-- Id -->
-                        <input id="product-id" type="hidden" name="product-id">
-                        <!-- Name -->
-                        <label for="product-name">Name : </label><br>
-                        <input type="text" id="product-name" name="product-name" required><br>
-                        <!-- Category -->
-                        <label for="product-category">Category :</label><br>
-                        <select name="product-category" id="product-category">
-                            <option value="fruit">Fruit</option>
-                            <option value="vegetable">Vegetable</option>
-                        </select><br>
-                        <!-- Origin -->
-                        <label for="product-country">Origin :</label><br>
-                        <select name="product-country" id="product-country"></select><br>
-                        <!-- Stock -->
-                        <label for="product-stock">Stock :</label><br>
-                        <input type="text" id="product-stock" name="product-stock"><br>
-                        <!-- Price-sell -->
-                        <label for="product-price-sell">Price sell :</label><br>
-                        <input type="text" id="product-price-sell" name="product-price-sell"><br>
-                        <!-- Suppliers -->
-                        <label for="product-supplier">Supplier :</label><br>
-                        <select name="product-supplier" id="product-supplier"></select><br>
-                        <!-- Price-supplier -->
-                        <label for="product-price-supplier">Price supplier :</label><br>
-                        <input type="text" id="product-price-supplier" name="product-price-supplier"><br><br>
-                        <!-- Submit button -->
-                        <input type="submit" id="form-submit" value="Submit">
-                    </fieldset>
+                <form id="form-supplier" method="post" action="db.json">
+                    <!-- Id -->
+                    <input id="product-id" type="hidden" name="product-id">
+                    <!-- Name -->
+                    <label for="product-name">Name : </label><br>
+                    <input type="text" id="product-name" name="product-name" required><br>
+                    <!-- Category -->
+                    <label for="product-category">Category :</label><br>
+                    <select name="product-category" id="product-category">
+                        <option value="fruit">Fruit</option>
+                        <option value="vegetable">Vegetable</option>
+                    </select><br>
+                    <!-- Origin -->
+                    <label for="product-country">Origin :</label><br>
+                    <select name="product-country" id="product-country"></select><br>
+                    <!-- Stock -->
+                    <label for="product-stock">Stock :</label><br>
+                    <input type="text" id="product-stock" name="product-stock"><br>
+                    <!-- Price-sell -->
+                    <label for="product-price-sell">Price sell :</label><br>
+                    <input type="text" id="product-price-sell" name="product-price-sell"><br>
+                    <!-- Suppliers -->
+                    <label for="product-supplier">Supplier :</label><br>
+                    <select name="product-supplier" id="product-supplier"></select><br>
+                    <!-- Price-supplier -->
+                    <label for="product-price-supplier">Price supplier :</label><br>
+                    <input type="text" id="product-price-supplier" name="product-price-supplier"><br><br>
                 </form>
             </div>
             <div class="modal-footer">
+                <!-- Buttons -->
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" form="modal-details">Save changes</button>
+                <button type="submit" class="btn btn-primary" form="form-supplier">Save changes</button>
             </div>
         </div>
     </div>
