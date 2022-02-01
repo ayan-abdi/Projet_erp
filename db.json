@@ -56,17 +56,27 @@
       "category": "fruit",
       "origin": "Belgium",
       "stock": "20",
-      "price_sell": "3",
+      "price_sell": "4",
       "supplier": "Lidl",
-      "price_supplier": "2"
+      "price_supplier": "2.5"
     },
     {
       "id": 7,
-      "name": "Orange",
+      "name": "Prune",
       "category": "fruit",
-      "origin": "Portugal",
-      "stock": "50",
+      "origin": "Anguilla",
+      "stock": "15",
       "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "2"
+    },
+    {
+      "id": 8,
+      "name": "Poire",
+      "category": "fruit",
+      "origin": "Afghanistan",
+      "stock": "20",
+      "price_sell": "3",
       "supplier": "Carrefour",
       "price_supplier": "2"
     }

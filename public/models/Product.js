@@ -5,7 +5,7 @@ class Product {
     name
 
     // Constructor.
-    constructor(id, name, category, origin, stock, price_sell, supplier, price_supplier, image) {
+    constructor(id, name, category, origin, stock, price_sell, supplier, price_supplier) {
         this.id = id
         this.Name = name 
         this.category = category 
@@ -13,8 +13,7 @@ class Product {
         this.stock = stock 
         this.price_sell = price_sell 
         this.supplier = supplier 
-        this.price_supplier = price_supplier 
-        this.image = image 
+        this.price_supplier = price_supplier
     }
 
     /**

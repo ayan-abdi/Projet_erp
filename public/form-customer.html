@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <!-- Form import -->
-                <form method="post" action="db.json">
+                <form id="form-customer" method="post" action="db.json">
                     <fieldset>
                         <legend>Add a new customer :</legend>
                         <!-- Id -->
@@ -43,8 +43,9 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <!-- Buttons -->
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary" form="form-customer">Save changes</button>
             </div>
         </div>
     </div>
