@@ -199,7 +199,7 @@ function createListingDatas(arrayLinks, inputSubmit) {
     for (const link of arrayLinks) {
         link.addEventListener('click', async function(e) {
             // Cancel default behavior.
-            e.preventDefault()
+            // e.preventDefault()
             // Fetch datas from API.
             const datas = await fetchDatas(window.location.origin + '/' + this.dataset.listing + 's')
             // Create HTML products listing table.
