@@ -1,73 +1,24 @@
-$primary: #ff00cc;
-$secondary: lighten($primary, 20%);
-$tertiary: darken($primary, 20%);
- 
 // 
-// Reset.
-// 
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-}
-
-// 
-// Generic Classes.
-// 
-
-.d-none {
-    display: none;
-}
-
-.d-block {
-    display: block;
-}
-
-// 
-// DOM.
-// 
-
-// Table.
-// 
-table {
-    border-collapse: collapse;
-
-    td {
-        border: 1px solid $secondary;
-    }
-}
-
 // Navigation.
 // 
-nav {
-
-    ul {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        
-        li {
-            list-style: none;
-
-            a {
-                background-color: $primary;
-                color: $tertiary;
-                text-decoration: none;
-                padding: 5px 15px;
-            }
-        }
-    }
+.st0 {
+    fill:#75A928;
 }
 
-// Form.
-// 
-form {
+.st1 {
+    fill:#BC1142;
+}
 
-    &#product-form {
-        display: block;
+symbol > path {
+    filter: invert(1);
+}
+
+ul.nav {
+
+    a.nav-link {
+        
+        &:hover {
+            color: lighten($color: #BC1142, $amount: 20%) !important;
+        }
     }
 }

@@ -121,6 +121,16 @@
       "phone": "478945657",
       "city": "Etterbeek",
       "total_pay": "124"
+    },
+    {
+      "id": 4,
+      "first_name": "Amandine",
+      "last_name": "Bataille",
+      "age": "33",
+      "email": "d.bataille@gmail.com",
+      "phone": "496485527",
+      "city": "Saint-Gilles",
+      "total_pay": "184"
     }
   ],
   "suppliers": [

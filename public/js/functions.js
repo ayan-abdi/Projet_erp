@@ -255,12 +255,13 @@ async function createTable(datas, htmlElem) {
     let html = ''
     // If at least 1 data exists.
     if(datas.length > 0) {
-        html += `<table>`
-        html += `<tr>`
+        html += `<div class="table-responsive">`
+        html += `<table class="table table-dark table-hover table-bordered">`
+        html += `<thead>`
         for (const key of Object.keys(datas[0])) {
             html += `<th>${key}</th>`
         }
-        html += `</tr>`
+        html += `</thead>`
         for (const data of datas) {
             html += `<tr>` 
             for (const value of Object.values(data)) {
@@ -269,6 +270,7 @@ async function createTable(datas, htmlElem) {
             html += `</tr>`
         }
         html += `</table>`
+        html += `</div>`
         
         htmlElem.innerHTML = html
     } else {

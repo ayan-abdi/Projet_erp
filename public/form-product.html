@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="productModalLabel">Add a new product :</h5>
+                <h5 class="modal-title" id="productModalLabel">Add a new product</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -12,29 +12,43 @@
                     <!-- Id -->
                     <input id="product-id" type="hidden" name="id">
                     <!-- Name -->
-                    <label for="product-name">Name : </label><br>
-                    <input type="text" id="product-name" name="name" required><br>
+                    <div class="form-floating mb-3">
+                        <input type="text" id="product-name" class="form-control" name="name" placeholder="Name" required>
+                        <label for="product-name" class="form-label">Name</label>
+                    </div>
                     <!-- Category -->
-                    <label for="product-category">Category :</label><br>
-                    <select name="category" id="product-category">
-                        <option value="fruit">Fruit</option>
-                        <option value="vegetable">Vegetable</option>
-                    </select><br>
+                    <div class="form-floating mb-3">
+                        <select id="product-category" class="form-select" name="category" >
+                            <option value="fruit">Fruit</option>
+                            <option value="vegetable">Vegetable</option>
+                        </select>
+                        <label for="product-category" class="form-label">Category</label>
+                    </div>
                     <!-- Origin -->
-                    <label for="product-country">Origin :</label><br>
-                    <select name="origin" id="product-country"></select><br>
+                    <div class="form-floating mb-3">
+                        <select id="product-country" class="form-select" name="origin"></select>
+                        <label for="product-country" class="form-label">Origin</label>
+                    </div>
                     <!-- Stock -->
-                    <label for="product-stock">Stock :</label><br>
-                    <input type="text" id="product-stock" name="stock"><br>
+                    <div class="form-floating mb-3">
+                        <input id="product-stock" class="form-control" type="text" name="stock" placeholder="Stock">
+                        <label for="product-stock" class="form-label">Stock</label>
+                    </div>
                     <!-- Price-sell -->
-                    <label for="product-price-sell">Price sell :</label><br>
-                    <input type="text" id="product-price-sell" name="price_sell"><br>
+                    <div class="form-floating mb-3">
+                        <input id="product-price-sell" class="form-control" type="text" name="price_sell" placeholder="Price sell">
+                        <label for="product-price-sell" class="form-label">Price sell</label>
+                    </div>
                     <!-- Suppliers -->
-                    <label for="product-supplier">Supplier :</label><br>
-                    <select name="supplier" id="product-supplier"></select><br>
+                    <div class="form-floating mb-3">
+                        <select id="product-supplier" class="form-select" name="supplier"></select>
+                        <label for="product-supplier" class="form-label">Supplier</label>
+                    </div>
                     <!-- Price-supplier -->
-                    <label for="product-price-supplier">Price supplier :</label><br>
-                    <input type="text" id="product-price-supplier" name="price_supplier"><br><br>
+                    <div class="form-floating mb-3">
+                        <input id="product-price-supplier" class="form-control" type="text" name="price_supplier" placeholder="Price supplier">
+                        <label for="product-price-supplier" class="form-label">Price supplier</label>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
