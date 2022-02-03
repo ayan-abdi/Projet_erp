@@ -204,6 +204,8 @@ function createListingDatas(arrayLinks, inputSubmit) {
             const datas = await fetchDatas(window.location.origin + '/' + this.dataset.listing + 's')
             // Create HTML products listing table.
             await createTable(datas, document.querySelector('#listing'))
+            // Display add button.
+            inputSubmit.classList.remove('d-none')
             // Set attributes to add button.
             inputSubmit.setAttribute('value', 'Add a ' + capitalizeFirstLetter(this.dataset.listing))
             inputSubmit.setAttribute('data-page', this.dataset.listing)
