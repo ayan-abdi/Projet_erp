@@ -10,31 +10,22 @@
                 <!-- Form import -->
                 <form id="form-supplier" method="post" action="db.json">
                     <!-- Id -->
-                    <input id="product-id" type="hidden" name="product-id">
+                    <input id="supplier-id" type="hidden" name="id">
                     <!-- Name -->
-                    <label for="product-name">Name : </label><br>
-                    <input type="text" id="product-name" name="product-name" required><br>
-                    <!-- Category -->
-                    <label for="product-category">Category :</label><br>
-                    <select name="product-category" id="product-category">
-                        <option value="fruit">Fruit</option>
-                        <option value="vegetable">Vegetable</option>
+                    <label for="supplier-name">Name : </label><br>
+                    <input type="text" id="supplier-name" name="name" required><br>
+                    <!-- City -->
+                    <label for="supplier-city">City :</label><br>
+                    <input type="text" id="supplier-city" name="city"><br>
+                    <!-- Product ID -->
+                    <label for="supplier-product-id">Product ID :</label><br>
+                    <select id="supplier-product-id" name="product_id">
+                        <option value="1">Pomme</option>
+                        <option value="2">Orange</option>
                     </select><br>
-                    <!-- Origin -->
-                    <label for="product-country">Origin :</label><br>
-                    <select name="product-country" id="product-country"></select><br>
-                    <!-- Stock -->
-                    <label for="product-stock">Stock :</label><br>
-                    <input type="text" id="product-stock" name="product-stock"><br>
-                    <!-- Price-sell -->
-                    <label for="product-price-sell">Price sell :</label><br>
-                    <input type="text" id="product-price-sell" name="product-price-sell"><br>
-                    <!-- Suppliers -->
-                    <label for="product-supplier">Supplier :</label><br>
-                    <select name="product-supplier" id="product-supplier"></select><br>
-                    <!-- Price-supplier -->
-                    <label for="product-price-supplier">Price supplier :</label><br>
-                    <input type="text" id="product-price-supplier" name="product-price-supplier"><br><br>
+                    <!-- Total purchases -->
+                    <label for="supplier-total-purchases">Total purchases :</label><br>
+                    <input type="text" id="supplier-total-purchases" name="total_purchases"><br><br>
                 </form>
             </div>
             <div class="modal-footer">

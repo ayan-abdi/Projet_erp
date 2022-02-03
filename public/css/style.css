@@ -20,7 +20,7 @@ table {
 }
 
 table td {
-  border: 1px solid black;
+  border: 1px solid #ff66e0;
 }
 
 nav ul {
@@ -40,7 +40,7 @@ nav ul li {
 
 nav ul li a {
   background-color: #ff00cc;
-  color: white;
+  color: #99007a;
   text-decoration: none;
   padding: 5px 15px;
 }

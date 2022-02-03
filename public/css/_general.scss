@@ -1,3 +1,7 @@
+$primary: #ff00cc;
+$secondary: lighten($primary, 20%);
+$tertiary: darken($primary, 20%);
+ 
 // 
 // Reset.
 // 
@@ -32,7 +36,7 @@ table {
     border-collapse: collapse;
 
     td {
-        border: 1px solid black;
+        border: 1px solid $secondary;
     }
 }
 
@@ -50,8 +54,8 @@ nav {
             list-style: none;
 
             a {
-                background-color: #ff00cc;
-                color: white;
+                background-color: $primary;
+                color: $tertiary;
                 text-decoration: none;
                 padding: 5px 15px;
             }

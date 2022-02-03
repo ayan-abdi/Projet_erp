@@ -9,6 +9,150 @@
 }
 
 /**
+* ASYNC Function - Get all products.
+*/
+const getProducts = async function() {
+    const response = await fetch('http://localhost:3000/products')
+    if (response.ok) {
+        const data = await response.json()
+        return data
+    } else {
+        console.error('Error : ', response.status);
+    }
+}
+
+/**
+* ASYNC Function - Get all suppliers.
+*/
+const getSuppliers = async function() {
+    const response = await fetch('http://localhost:3000/suppliers')
+    if (response.ok) {
+        const data = await response.json()
+        return data
+    } else {
+        console.error('Error : ', response.status);
+    }
+}
+
+/**
+* ASYNC Function - Get all customers.
+*/
+const getCustomers = async function() {
+    const response = await fetch('http://localhost:3000/customers')
+    if (response.ok) {
+        const data = await response.json()
+        return data
+    } else {
+        console.error('Error : ', response.status);
+    }
+}
+
+/**
+ * ASYNC Function - Insert new product datas in API database.
+ * @param {object} objectData - Object of datas.
+ */
+const insertProduct = async function(objectData) {
+    const response = await fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(objectData)
+    })
+    if (response.ok) {
+        await response.json()
+    } else {
+        console.error('Server : ' + response.status)
+    }
+}
+
+/**
+ * ASYNC Function - Insert new supplier datas in API database.
+ * @param {object} objectData - Object of datas.
+ */
+const insertSupplier = async function(objectData) {
+    const response = await fetch('http://localhost:3000/suppliers', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(objectData)
+    })
+    if (response.ok) {
+        await response.json()
+    } else {
+        console.error('Server : ' + response.status)
+    }
+}
+
+/**
+ * ASYNC Function - Insert new customer datas in API database.
+ * @param {object} objectData - Object of datas.
+ */
+const insertCustomer = async function(objectData) {
+    const response = await fetch('http://localhost:3000/customers', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(objectData)
+    })
+    if (response.ok) {
+        await response.json()
+    } else {
+        console.error('Server : ' + response.status)
+    }
+}
+
+
+
+
+
+const formSubmit = async function(htmlForm, className, insertFunction, getFunction, idModal) {
+    
+    // On form Submit.
+    htmlForm.addEventListener('submit', async (e) => {
+        
+        // Prevent default behavior.
+        e.preventDefault()
+        // Retrieve datas from form.
+        const formData = new FormData(e.target)
+        const datas = Object.fromEntries(formData)
+    
+        // Instanciate new class Object with form datas.
+        const product = await eval("new " + className + "(datas)")
+    
+        // Insert new Product in API database.
+        await insertFunction(product)
+        .then(async function() {
+            // Hide modal after datas sent (jQuery).
+            await $(idModal).modal('hide')
+            // Reset form after modal is hidden.
+            await htmlForm.reset()
+            // Fetch new datas after form reset.
+            const products  = await getFunction()
+            // Reload listing with new data inserted after getting new listing with new product.
+            await createTable(products, document.querySelector('#listing'))
+        })
+    })
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
  * Function - Capitalize first letter.
  * @param {String} string - String to capitalize first letter.
  * @returns Given string with first letter capitalized.
@@ -17,6 +161,11 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+
+/**
+ * Function - Create countries name options for HTML select.
+ * @param {html} selectElem - HTML select to insert countries options.
+ */
 function loadCountries(selectElem) {
     fetch("https://restcountries.com/v3.1/all")
     .then(function(response){
@@ -54,7 +203,7 @@ function createListingDatas(arrayLinks, inputSubmit) {
             // Fetch datas from API.
             const datas = await fetchDatas(window.location.origin + '/' + this.dataset.listing + 's')
             // Create HTML products listing table.
-            createTable(datas, document.querySelector('#listing'))
+            await createTable(datas, document.querySelector('#listing'))
             // Set attributes to add button.
             inputSubmit.setAttribute('value', 'Add a ' + capitalizeFirstLetter(this.dataset.listing))
             inputSubmit.setAttribute('data-page', this.dataset.listing)
@@ -99,7 +248,7 @@ function createSelectOptions(datas, htmlElem) {
  * @param {Array} datas - Array of datas.
  * @param {html} htmlElem - DOM HTML element.
  */
-function createTable(datas, htmlElem) {
+async function createTable(datas, htmlElem) {
 
     let html = ''
     // If at least 1 data exists.

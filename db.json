@@ -49,6 +49,46 @@
       "price_sell": "3",
       "supplier": "Carrefour",
       "price_supplier": "2"
+    },
+    {
+      "id": 6,
+      "name": "Poire",
+      "category": "fruit",
+      "origin": "Belgium",
+      "stock": "20",
+      "price_sell": "4",
+      "supplier": "Lidl",
+      "price_supplier": "1"
+    },
+    {
+      "id": 7,
+      "name": "Fraise",
+      "category": "fruit",
+      "origin": "Spain",
+      "stock": "100",
+      "price_sell": "1",
+      "supplier": "Lidl",
+      "price_supplier": "0.5"
+    },
+    {
+      "id": 8,
+      "name": "Orange",
+      "category": "fruit",
+      "origin": "Greece",
+      "stock": "20",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "1"
+    },
+    {
+      "id": 9,
+      "name": "Prune",
+      "category": "fruit",
+      "origin": "Ireland",
+      "stock": "15",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "1"
     }
   ],
   "customers": [
@@ -71,22 +111,39 @@
       "tel": 473178010,
       "addres": "Leuven",
       "total_pay": 55
+    },
+    {
+      "id": 3,
+      "first_name": "Guillaume",
+      "last_name": "Dutilleux",
+      "age": "28",
+      "email": "guish@gmail.com",
+      "phone": "478945657",
+      "city": "Etterbeek",
+      "total_pay": "124"
     }
   ],
   "suppliers": [
     {
       "id": 1,
       "name": "Carrefour",
-      "addres": "charleroi",
+      "city": "Charleroi",
       "product_id": 1,
       "total_purchases": 500
     },
     {
       "id": 2,
       "name": "Lidl",
-      "addres": "mons",
+      "city": "Mons",
       "product_id": 3,
       "total_purchases": 100
+    },
+    {
+      "id": 3,
+      "name": "Bio Planet",
+      "city": "Forest",
+      "product_id": "2",
+      "total_purchases": "1000"
     }
   ]
 }

@@ -5,15 +5,15 @@ class Product {
     name
 
     // Constructor.
-    constructor(id, name, category, origin, stock, price_sell, supplier, price_supplier) {
-        this.id = id
-        this.Name = name 
-        this.category = category 
-        this.origin = origin 
-        this.stock = stock 
-        this.price_sell = price_sell 
-        this.supplier = supplier 
-        this.price_supplier = price_supplier
+    constructor(object) {
+        this.id = object.id
+        this.Name = object.name 
+        this.category = object.category 
+        this.origin = object.origin 
+        this.stock = object.stock 
+        this.price_sell = object.price_sell 
+        this.supplier = object.supplier 
+        this.price_supplier = object.price_supplier
     }
 
     /**
